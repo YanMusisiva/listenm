@@ -1,6 +1,7 @@
 "use client";
 
 import React, { Suspense, useState } from 'react';
+import Image from 'next/image';
 
 // Navbar Vercel-style responsive avec menu hamburger
 const Navbar = () => {
@@ -87,9 +88,11 @@ const Header = () => (
     <div className="max-w-4xl mx-auto flex flex-col items-center px-4">
       <div className="bg-white rounded-xl p-8 w-full flex flex-col items-center shadow border border-gray-100">
         <h1 className="text-5xl font-black mb-6 text-center tracking-tight">
-          Bienvenue sur notre site d'apprentissage
+          Bienvenue sur notre site d&apos;apprentissage
         </h1>
-        <img
+        <Image
+          width={800}
+          height={300}
           src="/path/to/your/header-image.jpg"
           alt="Header"
           className="rounded-xl shadow w-full max-w-2xl object-cover h-56 border border-gray-200"
@@ -112,7 +115,9 @@ const Presentation = () => (
         </p>
         <CTAButton />
       </div>
-      <img
+      <Image
+        width={400}
+        height={300}
         src="/path/to/your/presentation-image.jpg"
         alt="Présentation"
         className="rounded-xl shadow w-full max-w-md object-cover h-56 border border-gray-200"
@@ -170,7 +175,7 @@ const Page = () => {
       <div className="pt-24">
         <Header />
         <Presentation />
-        <Suspense fallback={<div className="text-center py-10 text-lg text-gray-500">Chargement des sujets d'apprentissage...</div>}>
+        <Suspense fallback={<div className="text-center py-10 text-lg text-gray-500">Chargement des sujets d&apos;apprentissage...</div>}>
           <div id="matieres">
             <LearningTopics />
           </div>
