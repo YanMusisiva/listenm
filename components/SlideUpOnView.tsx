@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, ReactNode, useCallback } from "react";
+import { useRef, useState, ReactNode, useCallback } from "react";
 
 interface SlideUpOnViewProps {
   children: ReactNode;

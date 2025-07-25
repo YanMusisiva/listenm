@@ -300,7 +300,7 @@ const ContactSection = () => {
                 form.reset();
                 alert("Message envoyé !");
                 setShowForm(false);
-              } catch (error) {
+              } catch {
                 setGlobalError("Erreur de connexion au serveur.");
               } finally {
                 setIsSubmitting(false);
