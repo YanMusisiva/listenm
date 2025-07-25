@@ -198,7 +198,7 @@ const Presentation = () => (
       <Image
         width={400}
         height={300}
-        src="/header-image.png"
+        src="/presentation.jpg"
         alt="Présentation"
         className="rounded-xl shadow w-full max-w-md object-fit h-72 border border-gray-200"
       />
