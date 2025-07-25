@@ -55,7 +55,7 @@ ${message}
         </div>
       `,
     });
-  } catch (e) {
+  } catch {
     return new Response(
       JSON.stringify({
         error: "Erreur lors de l'envoi de l'email à l'administrateur.",

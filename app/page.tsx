@@ -188,10 +188,10 @@ const Presentation = () => (
         <p className="text-xl text-gray-700 mb-6 font-light">
           En quelques semaines ou mois, transforme tes idées en applications
           concrètes : apprends à coder et réalise des projets extraordinaires.
-          Aujourd’hui, l’IA révolutionne le numérique, rendant tes compétences
-          immédiatement actionnables, sans pression, et sans payer 1500 $ pour
-          un an de formation lente. Profite de cette ère pour créer vite, mieux,
-          et avancer.
+          Aujourd&apos;hui, l&apos;IA révolutionne le numérique, rendant tes
+          compétences immédiatement actionnables, sans pression, et sans payer
+          1500 $ pour un an de formation lente. Profite de cette ère pour créer
+          vite, mieux, et avancer.
         </p>
         <CTAButton />
       </div>
@@ -211,6 +211,9 @@ const LearningTopics = React.lazy(() => import("./LearningTopics"));
 // Contact section with "Ouvrir le formulaire" button and persuasive text
 const ContactSection = () => {
   const [showForm, setShowForm] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [globalError, setGlobalError] = useState("");
 
   return (
     <section
@@ -234,7 +237,9 @@ const ContactSection = () => {
           </span>
           <br />
           <span className="text-gray-600">
-            <b>Arrêtez de perdre du temps à chercher des tutos à l'aveugle.</b>
+            <b>
+              Arrêtez de perdre du temps à chercher des tutos à l&apos;aveugle.
+            </b>
             <br /> Contactez-nous dès maintenant pour découvrir comment AsCode
             peut vous aider à atteindre vos objectifs.
             <br />
@@ -257,6 +262,10 @@ const ContactSection = () => {
             className="flex flex-col gap-6 mt-8"
             onSubmit={async (e) => {
               e.preventDefault();
+              setErrors({});
+              setGlobalError("");
+              setIsSubmitting(true);
+
               const form = e.currentTarget;
               const data = {
                 name: (form.elements.namedItem("name") as HTMLInputElement)
@@ -267,39 +276,100 @@ const ContactSection = () => {
                   form.elements.namedItem("message") as HTMLTextAreaElement
                 )?.value,
               };
-              await fetch("/api/contact", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data),
-              });
-              form.reset();
-              alert("Message envoyé !");
-              setShowForm(false);
+
+              try {
+                const res = await fetch("/api/contact", {
+                  method: "POST",
+                  headers: { "Content-Type": "application/json" },
+                  body: JSON.stringify(data),
+                });
+
+                const json = await res.json();
+
+                if (!res.ok) {
+                  if (json.errors) {
+                    setErrors(json.errors);
+                  } else if (json.error) {
+                    setGlobalError(json.error);
+                  } else {
+                    setGlobalError("Une erreur inattendue s'est produite.");
+                  }
+                  return;
+                }
+
+                form.reset();
+                alert("Message envoyé !");
+                setShowForm(false);
+              } catch (error) {
+                setGlobalError("Erreur de connexion au serveur.");
+              } finally {
+                setIsSubmitting(false);
+              }
             }}
           >
-            <input
-              type="text"
-              name="name"
-              placeholder="Votre nom"
-              className="px-5 py-3 rounded border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-lg bg-white/80 text-black"
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Votre email"
-              className="px-5 py-3 rounded border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-lg bg-white/80 text-black"
-              required
-            />
-            <textarea
-              name="message"
-              placeholder="Votre message"
-              className="px-5 py-3 rounded border border-yellow-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 text-lg bg-white/80 text-black"
-              rows={4}
-              required
-            />
-            <button className="w-full inline-block bg-gradient-to-r from-black via-gray-900 to-gray-700 text-white px-8 py-3 rounded-lg shadow-lg font-semibold text-lg hover:scale-105 hover:bg-black transition-all duration-200">
-              Envoyer
+            <div className="flex flex-col gap-1">
+              <input
+                type="text"
+                name="name"
+                placeholder="Votre nom"
+                className={`px-5 py-3 rounded border ${
+                  errors.name ? "border-red-400" : "border-yellow-200"
+                } focus:outline-none focus:ring-2 ${
+                  errors.name ? "focus:ring-red-400" : "focus:ring-yellow-400"
+                } text-lg bg-white/80 text-black`}
+                required
+              />
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name}</p>
+              )}
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <input
+                type="email"
+                name="email"
+                placeholder="Votre email"
+                className={`px-5 py-3 rounded border ${
+                  errors.email ? "border-red-400" : "border-yellow-200"
+                } focus:outline-none focus:ring-2 ${
+                  errors.email ? "focus:ring-red-400" : "focus:ring-yellow-400"
+                } text-lg bg-white/80 text-black`}
+                required
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm">{errors.email}</p>
+              )}
+            </div>
+
+            <div className="flex flex-col gap-1">
+              <textarea
+                name="message"
+                placeholder="Votre message"
+                className={`px-5 py-3 rounded border ${
+                  errors.message ? "border-red-400" : "border-yellow-200"
+                } focus:outline-none focus:ring-2 ${
+                  errors.message
+                    ? "focus:ring-red-400"
+                    : "focus:ring-yellow-400"
+                } text-lg bg-white/80 text-black`}
+                rows={4}
+                required
+              />
+              {errors.message && (
+                <p className="text-red-500 text-sm">{errors.message}</p>
+              )}
+            </div>
+
+            {globalError && (
+              <p className="text-red-500 text-sm">{globalError}</p>
+            )}
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full inline-block bg-gradient-to-r from-black via-gray-900 to-gray-700 text-white px-8 py-3 rounded-lg shadow-lg font-semibold text-lg hover:scale-105 hover:bg-black transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? "Envoi en cours..." : "Envoyer"}
             </button>
           </form>
         )}
