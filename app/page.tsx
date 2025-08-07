@@ -11,7 +11,7 @@ const Navbar = () => {
     <nav className="w-full bg-white/90 backdrop-blur border-b border-gray-200 fixed top-0 left-0 z-30">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-2">
         <span className="text-2xl font-black text-black tracking-tight">
-          AsCode
+          ListenMethod
         </span>
         {/* Desktop menu */}
         <ul className="hidden md:flex gap-8 text-gray-700 ">
@@ -137,23 +137,21 @@ const Header = () => (
   <header className="bg-gradient-to-br from-[#f8fafc] via-[#f3f4f6] to-[#fef9c3] pt-16 pb-20 text-black border-b border-gray-200">
     <div className="max-w-4xl mx-auto flex flex-col items-center justify-center gap-8 px-4 text-center">
       <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight leading-tight max-w-2xl">
-        Apprenez à coder{" "}
-        <span className="bg-gradient-to-r from-yellow-200 via-yellow-100 to-yellow-300 px-3 py-1 rounded-lg shadow font-extrabold">
-          simplement
+        Ecouter et Parler Anglais{" "}
+        <span className=" bg-gradient-to-r from-yellow-200 via-yellow-100 to-yellow-300 px-3 py-1 rounded-lg shadow font-extrabold">
+          rapidement
         </span>
         .
       </h1>
       <p className="text-2xl text-gray-700 mb-8 font-light max-w-xl mx-auto">
-        Passe du scroll à la création.
+        On n'apprends pas une langue pour reussir un test, on l'apprend pour
+        parler.
         <br />
         <span className="text-lg text-gray-600">
-          Une formation où tu codes, construis et apprends en réalisant des
-          projets concrets, pour remplir ton CV et ton GitHub comme un vrai
-          développeur prêt à lancer sa carrière.
+          Il faut entendre,repeter et s'habituer a l'anglais comme un enfant
+          s'habitue a parler sa langue maternelle.
           <br />
-          <span className="font-semibold text-black">
-            Essayez gratuitement, sans engagement.
-          </span>
+          <span className="font-semibold text-black">Ecoute et apprends</span>
         </span>
       </p>
       <div className="flex flex-col sm:flex-row gap-3 w-full max-w-xs mx-auto">
@@ -186,12 +184,13 @@ const Presentation = () => (
           Présentation
         </h2>
         <p className="text-xl text-gray-700 mb-6 font-light">
-          En quelques semaines ou mois, transforme tes idées en applications
-          concrètes : apprends à coder et réalise des projets extraordinaires.
-          Aujourd&apos;hui, l&apos;IA révolutionne le numérique, rendant tes
-          compétences immédiatement actionnables, sans pression, et sans payer
-          1500 $ pour un an de formation lente. Profite de cette ère pour créer
-          vite, mieux, et avancer.
+          En 30 jours, tu vas ecouter 30 minutes d'anglais chaque jour pour
+          t'habituer aux sons et aux phrases utiles, puis tu parleras une heure
+          avec un formateur qui te laisse t'exprimer , sans t'interrompre toutes
+          les deux secondes.Pas de regles de grammaire a apprendre par coeur
+          ,pas de pression scolaire.Juste de l'ecoute , de la repetition, de la
+          parole, et des progres concrets que tu sens chaque jour.Tu vas enfin
+          parler anglais pour de vrai , avec plaisir et confiance.
         </p>
         <CTAButton />
       </div>
@@ -222,7 +221,7 @@ const ContactSection = () => {
     >
       <div className="max-w-2xl mx-auto bg-white/90 rounded-2xl shadow-2xl p-12 border border-yellow-100 text-center backdrop-blur-sm">
         <h2 className="text-4xl font-black mb-4 text-black tracking-tight">
-          Prêt à transformer votre avenir&nbsp;?
+          Prêt à commencer l'aventure&nbsp;?
         </h2>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
           <span className="block mb-2">
@@ -231,21 +230,18 @@ const ContactSection = () => {
             </span>
           </span>
           <span className="font-semibold text-black">
-            Rejoignez AsCode aujourd&apos;hui et bénéficiez d&apos;un
-            accompagnement gratuit et personnalisé pour lancer votre carrière
-            tech.
+            Rejoignez ListenMethod aujourd&apos;hui et bénéficiez d&apos;un
+            accompagnement pour seulement 49$.
           </span>
           <br />
           <span className="text-gray-600">
             <b>
-              Arrêtez de perdre du temps à chercher des tutos à l&apos;aveugle.
+              Arrêtez d'etre mal a l'aise, avec vos collegues ou pendant vos
+              voyages.
             </b>
-            <br /> Contactez-nous dès maintenant pour découvrir comment AsCode
-            peut vous aider à atteindre vos objectifs.
             <br />
             <span className="text-yellow-600 font-bold">
-              Avec notre formation payante pour 99 $, voyez vos projets prendre
-              vie en quelques semaines.
+              Avec notre formation payante de 99 $, donner aujourd'hui pour 49$
             </span>
           </span>
         </p>
@@ -254,7 +250,7 @@ const ContactSection = () => {
             className="inline-block bg-gradient-to-r from-black via-gray-900 to-gray-700 text-white px-8 py-3 rounded-lg shadow-lg font-semibold text-lg hover:scale-105 hover:bg-black transition-all duration-200"
             onClick={() => setShowForm(true)}
           >
-            Ouvrir le formulaire
+            Ouvrir le formulaire de contact
           </button>
         )}
         {showForm && (
@@ -381,7 +377,7 @@ const ContactSection = () => {
 const Footer = () => (
   <footer className="bg-white text-gray-700 py-10 mt-0 border-t border-gray-100">
     <div className="max-w-7xl mx-auto text-center text-lg font-light px-6">
-      <p>&copy; 2025 AsCode. Tous droits réservés.</p>
+      <p>&copy; 2025 ListenMethod. Tous droits réservés.</p>
       <div className="mt-4">
         <CTAButton />
       </div>

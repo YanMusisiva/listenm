@@ -3,17 +3,9 @@ import SlideUpOnView from "@/components/SlideUpOnView";
 
 const topics = [
   {
-    title: "Bases du Web (HTML, CSS, Tailwind)",
+    title: "Bases de la langue et ecoute de sons",
     color: "text-pink-600",
-    items: [
-      "HTML5 (structure, sémantique, accessibilité)",
-      "CSS3 (sélecteurs, flexbox, grid, animations)",
-      "Responsive design",
-      "Préprocesseurs CSS (Sass, Less) - optionnel",
-      "Frameworks CSS (Bootstrap, Tailwind CSS)",
-      "Utilisation de Tailwind pour des interfaces modernes",
-      "Bonnes pratiques UI/UX",
-    ],
+    items: ["Audios", "PDF", "Video youtube gratuites"],
     icon: (
       <svg
         className="w-10 h-10 mb-4 text-pink-400"
@@ -36,17 +28,9 @@ const topics = [
     ),
   },
   {
-    title: "JavaScript",
+    title: "Parler",
     color: "text-yellow-600",
-    items: [
-      "Syntaxe de base (variables, fonctions, conditions, boucles)",
-      "Manipulation du DOM",
-      "ES6+ (let/const, arrow functions, classes, modules)",
-      "Asynchrone (promises, async/await, fetch)",
-      "Gestion des erreurs",
-      "Outils de développement (console, debugger)",
-      "Bonnes pratiques et patterns courants",
-    ],
+    items: ["Appels avec formateurs", "Appel 30 min a 1h", "Suite de l'ecoute"],
     icon: (
       <svg
         className="w-10 h-10 mb-4 text-yellow-400"
@@ -60,84 +44,15 @@ const topics = [
       </svg>
     ),
   },
+
   {
-    title: "TypeScript",
-    color: "text-blue-400",
-    items: [
-      "Types de base (string, number, boolean, array, tuple, enum)",
-      "Interfaces et types personnalisés",
-      "Fonctions typées",
-      "Classes et héritage",
-      "Génériques",
-      "Interopérabilité avec JavaScript",
-      "Utilisation avec React et Next.js",
-    ],
-    icon: (
-      <svg
-        className="w-10 h-10 mb-4 text-blue-300"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        viewBox="0 0 24 24"
-      >
-        <rect
-          x="4"
-          y="4"
-          width="16"
-          height="16"
-          rx="4"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8 16h8M12 8v8" />
-      </svg>
-    ),
-  },
-  {
-    title: "Développement Web (Next.js)",
-    color: "text-blue-600",
-    items: [
-      "JavaScript/TypeScript",
-      "React (hooks, composants, context)",
-      "Next.js (pages, routing, SSR/SSG)",
-      "APIs (API Routes, consommation d’API)",
-      "Gestion d’état (Redux, Context API...)",
-      "Optimisation des performances",
-      "Déploiement (Vercel, Netlify...)",
-      "Tests (Jest, React Testing Library...)",
-    ],
-    icon: (
-      <svg
-        className="w-10 h-10 mb-4 text-blue-400"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        viewBox="0 0 24 24"
-      >
-        <rect
-          x="4"
-          y="4"
-          width="16"
-          height="16"
-          rx="4"
-          stroke="currentColor"
-          strokeWidth="2"
-        />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h8" />
-      </svg>
-    ),
-  },
-  {
-    title: "Développement Mobile (React Native)",
+    title: "Orientation selon le domaine",
     color: "text-indigo-600",
     items: [
-      "JavaScript/TypeScript",
-      "React Native (bases, composants, navigation)",
-      "Gestion d’état (Redux, Context API, Zustand...)",
-      "APIs et requêtes réseau (fetch, axios...)",
-      "Gestion des permissions et accès natifs",
-      "Déploiement sur iOS et Android",
-      "Tests et debug mobile",
+      "audios",
+      "Recommandations videos youtubes",
+      "PDF",
+      "Recommandations de films",
     ],
     icon: (
       <svg
@@ -152,39 +67,6 @@ const topics = [
       </svg>
     ),
   },
-  {
-    title: "Déploiement & Marketing",
-    color: "text-green-600",
-    items: [
-      "Achat et configuration de nom de domaine",
-      "Hébergement et déploiement (Vercel, Netlify...)",
-      "SEO et analytics de base",
-      "Création d’une landing page efficace",
-      "Collecte d’emails et newsletters",
-      "Monétisation et vente de vos apps",
-      "Stratégies de lancement (Product Hunt, réseaux sociaux)",
-    ],
-    icon: (
-      <svg
-        className="w-10 h-10 mb-4 text-green-400"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        viewBox="0 0 24 24"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0v-4a1 1 0 011-1h2a1 1 0 011 1v4"
-        />
-      </svg>
-    ),
-  },
 ];
 
 const LearningTopics = () => (
@@ -192,7 +74,7 @@ const LearningTopics = () => (
     <h2 className="text-4xl font-extrabold text-center mb-16 text-gray-900 tracking-tight">
       Les matières à apprendre
     </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-5">
       {topics.map((topic) => (
         <SlideUpOnView key={topic.title}>
           <div className="bg-white/80 backdrop-blur-lg rounded-3xl shadow-2xl p-10 flex flex-col items-center border border-gray-100 hover:shadow-apple transition-all duration-300">

@@ -35,10 +35,10 @@ export async function POST(req: Request) {
   // Email à l'administrateur du site
   try {
     await transporter.sendMail({
-      from: `"AsCode Contact" <${process.env.SMTP_USER}>`,
+      from: `"ListenMethod Contact" <${process.env.SMTP_USER}>`,
       to: process.env.SMTP_USER,
-      subject: `Nouveau message de contact AsCode`,
-      text: `Vous avez reçu un nouveau message via le formulaire de contact AsCode :
+      subject: `Nouveau message de contact ListenMethod`,
+      text: `Vous avez reçu un nouveau message via le formulaire de contact ListenMethod :
 
 Nom : ${name}
 Email : ${email}
@@ -67,14 +67,14 @@ ${message}
   // Email de confirmation à l'utilisateur
   try {
     await transporter.sendMail({
-      from: `"AsCode" <${process.env.SMTP_USER}>`,
+      from: `"ListenMethod" <${process.env.SMTP_USER}>`,
       to: email,
-      subject: "Merci pour votre message – Bienvenue sur AsCode 🚀",
+      subject: "Merci pour votre message – Bienvenue sur ListenMethod 🚀",
       text: `Bonjour ${name},
 
-Merci de nous avoir contactés !
+Merci de nous avoir contacté !
 
-Chez AsCode, nous croyons qu'apprendre à coder peut devenir simple et rapide, même si vous partez de zéro. Grâce aux outils d'intelligence artificielle comme GitHub Copilot, ChatGPT ou Cursor, vous pouvez créer de vrais projets en quelques mois au lieu de plusieurs années.
+Chez , nous croyons qu'apprendre à coder peut devenir simple et rapide, même si vous partez de zéro. Grâce aux outils d'intelligence artificielle comme GitHub Copilot, ChatGPT ou Cursor, vous pouvez créer de vrais projets en quelques mois au lieu de plusieurs années.
 
 Voici notre parcours étape par étape :
 1️⃣ Démarrage : Comprendre les bases du code sans stress.
