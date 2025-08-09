@@ -144,16 +144,19 @@ const Header = () => (
         .
       </h1>
       <p className="text-2xl text-gray-700 mb-8 font-light max-w-xl mx-auto">
-        On n'apprends pas une langue pour reussir un test, on l'apprend pour
-        parler.
+        On n&apos;apprend pas une langue pour réussir un test, on l&apos;apprend
+        pour parler.
         <br />
         <span className="text-lg text-gray-600">
-          Il faut entendre,repeter et s'habituer a l'anglais comme un enfant
-          s'habitue a parler sa langue maternelle.
+          Il faut écouter, répéter et s&apos;habituer à l&apos;anglais comme un
+          enfant s&apos;habitue à parler sa langue maternelle.
           <br />
-          <span className="font-semibold text-black">Ecoute et apprends</span>
+          <span className="font-semibold text-black">
+            Écoutez, apprenez et parlez avec une vraie personne
+          </span>
         </span>
       </p>
+
       <div className="flex flex-col sm:flex-row gap-3 w-full max-w-xs mx-auto">
         <a
           href="#contact"
@@ -184,20 +187,18 @@ const Presentation = () => (
           Présentation
         </h2>
         <p className="text-xl text-gray-700 mb-6 font-light">
-          En 30 jours, tu vas ecouter 30 minutes d'anglais chaque jour pour
-          t'habituer aux sons et aux phrases utiles, puis tu parleras une heure
-          avec un formateur qui te laisse t'exprimer , sans t'interrompre toutes
-          les deux secondes.Pas de regles de grammaire a apprendre par coeur
-          ,pas de pression scolaire.Juste de l'ecoute , de la repetition, de la
-          parole, et des progres concrets que tu sens chaque jour.Tu vas enfin
-          parler anglais pour de vrai , avec plaisir et confiance.
+          En 30 jours, écoutez 30 min d&apos;anglais par jour, puis parlez avec
+          des formateurs qui vous laisse vous exprimer librement. Pas de
+          grammaire par coeur, pas de pression : juste écoute, répétition et
+          parole. Progressez chaque jour et parlez anglais avec plaisir et
+          confiance. Rejoignez-nous dès aujourd&apos;hui.
         </p>
         <CTAButton />
       </div>
       <Image
         width={400}
         height={300}
-        src="/presentation.jpg"
+        src="/listenmethod.jpg"
         alt="Présentation"
         className="rounded-xl shadow w-full max-w-md object-fit h-72 border border-gray-200"
       />
@@ -220,7 +221,7 @@ const ContactSection = () => {
       className="py-16 bg-gradient-to-b from-[#fef9c3] via-[#f3f4f6] to-[#f8fafc]"
     >
       <div className="max-w-2xl mx-auto bg-white/90 rounded-2xl shadow-2xl p-12 border border-yellow-100 text-center backdrop-blur-sm">
-        <h2 className="text-4xl font-black mb-4 text-black tracking-tight">
+        {/* <h2 className="text-4xl font-black mb-4 text-black tracking-tight">
           Prêt à commencer l'aventure&nbsp;?
         </h2>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
@@ -244,7 +245,49 @@ const ContactSection = () => {
               Avec notre formation payante de 99 $, donner aujourd'hui pour 49$
             </span>
           </span>
-        </p>
+        </p> */}
+
+        <div className="flex flex-col md:flex-row gap-6 justify-center mb-8">
+          <div className="flex-1 bg-yellow-50 border border-yellow-200 rounded-xl shadow p-6 text-center">
+            <h3 className="text-2xl font-bold text-black mb-2">
+              Offre Découverte
+            </h3>
+            <p className="text-4xl font-extrabold text-yellow-700 mb-2">49$</p>
+            <p className="text-gray-700 mb-4">
+              30 jours d&apos;écoute + 12 appels avec 2 formateurs + 140 phrases
+              anticipées
+            </p>
+            <span className="inline-block bg-yellow-100 text-yellow-900 font-bold px-3 py-1 rounded-full">
+              Idéal pour débuter
+            </span>
+          </div>
+          <div className="flex-1 bg-yellow-100 border border-yellow-300 rounded-xl shadow p-6 text-center">
+            <h3 className="text-2xl font-bold text-black mb-2">
+              Offre Standard
+            </h3>
+            <p className="text-4xl font-extrabold text-yellow-800 mb-2">79$</p>
+            <p className="text-gray-700 mb-4">
+              30 jours d&apos;écoute + 18 appels avec 4 formateurs + 280 phrases
+              anticipées
+            </p>
+            <span className="inline-block bg-yellow-200 text-yellow-900 font-bold px-3 py-1 rounded-full">
+              Meilleur rapport qualité/prix
+            </span>
+          </div>
+          <div className="flex-1 bg-yellow-200 border border-yellow-400 rounded-xl shadow p-6 text-center">
+            <h3 className="text-2xl font-bold text-black mb-2">
+              Offre Premium
+            </h3>
+            <p className="text-4xl font-extrabold text-yellow-900 mb-2">99$</p>
+            <p className="text-gray-700 mb-4">
+              30 jours d&apos;écoute + 24 appels avec 6 formateurs + 420 phrases
+              anticipées
+            </p>
+            <span className="inline-block bg-yellow-300 text-yellow-900 font-bold px-3 py-1 rounded-full">
+              Pour progresser vite
+            </span>
+          </div>
+        </div>
         {!showForm && (
           <button
             className="inline-block bg-gradient-to-r from-black via-gray-900 to-gray-700 text-white px-8 py-3 rounded-lg shadow-lg font-semibold text-lg hover:scale-105 hover:bg-black transition-all duration-200"
