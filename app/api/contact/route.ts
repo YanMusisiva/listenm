@@ -5,7 +5,12 @@ export async function POST(req: Request) {
 
   // Validation des champs
   const errors: Record<string, string> = {};
-  if (!name || typeof name !== "string" || name.trim().length < 2) {
+  if (
+    !name ||
+    typeof name !== "string" ||
+    name.trim().length < 2 ||
+    name.length > 50
+  ) {
     errors.name = "Le nom est requis (au moins 2 caractères).";
   }
   const email = (rawEmail || "").trim();
@@ -16,7 +21,12 @@ export async function POST(req: Request) {
   ) {
     errors.email = "Email invalide.";
   }
-  if (!message || typeof message !== "string" || message.trim().length < 10) {
+  if (
+    !message ||
+    typeof message !== "string" ||
+    message.trim().length < 10 ||
+    message.length > 200
+  ) {
     errors.message = "Le message doit contenir au moins 10 caractères.";
   }
   if (Object.keys(errors).length > 0) {
