@@ -48,7 +48,7 @@ ${message}
 `,
       html: `
         <div style="font-family:sans-serif;font-size:1rem;color:#222;">
-          <h2 style="color:#111;">Nouveau message de contact AsCode</h2>
+          <h2 style="color:#111;">Nouveau message de contact ListenMethod</h2>
           <p><b>Nom :</b> ${name}</p>
           <p><b>Email :</b> ${email}</p>
           <p><b>Message :</b><br/>${message.replace(/\n/g, "<br/>")}</p>
@@ -72,44 +72,43 @@ ${message}
       subject: "Merci pour votre message – Bienvenue sur ListenMethod 🚀",
       text: `Bonjour ${name},
 
-Merci de nous avoir contacté !
+Merci de nous avoir contactés !
 
-Chez , nous croyons qu'apprendre à coder peut devenir simple et rapide, même si vous partez de zéro. Grâce aux outils d'intelligence artificielle comme GitHub Copilot, ChatGPT ou Cursor, vous pouvez créer de vrais projets en quelques mois au lieu de plusieurs années.
+Chez ListenMethod, nous croyons qu'apprendre l'anglais peut être simple, agréable et efficace, même si vous partez de zéro.
 
-Voici notre parcours étape par étape :
-1️⃣ Démarrage : Comprendre les bases du code sans stress.
-2️⃣ Pratique : Créer vos premiers mini-projets guidés.
-3️⃣ IA au service de votre apprentissage : Utiliser Copilot et ChatGPT pour coder plus vite.
-4️⃣ Niveau avancé : Construire des applications réelles et lancer vos projets.
+En seulement 30 jours, vous allez :
+- Écouter 30 minutes d'anglais par jour pour habituer votre oreille aux sons et aux phrases utiles.
+- Parler avec nos formateurs qui vous laisseront vous exprimer librement, sans vous interrompre toutes les deux secondes.
+- Oublier la grammaire par cœur et la pression scolaire : ici, c'est juste écoute, répétition et parole.
 
-Avec AsCode, vous apprenez en créant, pas en restant bloqué sur la théorie.
+Résultat : des progrès concrets que vous ressentirez chaque jour, et la confiance pour parler anglais pour de vrai.
 
 Nous avons bien reçu votre message :
 "${message}"
 
 Nous revenons vers vous très vite.
 
- Répondez directement à cet e-mail pour nous dire si vous souhaitez profiter de l’accompagnement gratuit, ou si vous préférez passer dès maintenant à la formation complète pour avancer plus vite. !
+Répondez directement à cet e-mail si vous souhaitez démarrer votre programme dès aujourd'hui.
 
-À très bientôt sur AsCode pour commencer cette aventure !
-L'équipe AsCode
+À bientôt sur ListenMethod,
+L'équipe ListenMethod
 `,
 
       html: `
       <div style="font-family:sans-serif;font-size:1rem;color:#222;max-width:600px;margin:auto;">
         <h2 style="color:#111;">Merci pour votre message, ${name} 🚀</h2>
-        <p>Chez <b>AsCode</b>, nous croyons qu'apprendre à coder peut être simple, rapide et concret, même si vous débutez.</p>
-        <p>Grâce aux outils d'IA comme <b>GitHub Copilot</b>, <b>ChatGPT</b> ou <b>Cursor</b>, vous pouvez créer de vrais projets en quelques mois et progresser plus vite que jamais.</p>
-        
+        <p>Chez <b>ListenMethod</b>, nous croyons qu'apprendre l'anglais peut être simple, agréable et efficace, même si vous débutez.</p>
+
         <div style="background:#f7fafc;padding:16px 20px;border-radius:8px;margin:24px 0;">
-          <b>Voici notre parcours étape par étape :</b>
+          <b>En seulement 30 jours, vous allez :</b>
           <ul style="margin:12px 0;padding-left:20px;">
-            <li><b>1️⃣ Démarrage :</b> Comprendre les bases sans stress.</li>
-            <li><b>2️⃣ Pratique :</b> Créer vos premiers mini-projets.</li>
-            <li><b>3️⃣ IA au service de votre apprentissage :</b> Utiliser Copilot, ChatGPT, Cursor pour coder plus vite.</li>
-            <li><b>4️⃣ Niveau avancé :</b> Construire de vraies applications.</li>
+            <li>🎧 Écouter 30 minutes d'anglais par jour pour habituer votre oreille aux sons et aux phrases utiles.</li>
+            <li>🗣️ Parler avec nos formateurs qui vous laisseront vous exprimer librement, sans vous couper toutes les deux secondes.</li>
+            <li>💡 Oublier la grammaire par cœur et la pression scolaire : juste écoute, répétition et parole.</li>
           </ul>
         </div>
+
+        <p><b>Résultat :</b> des progrès concrets chaque jour, et la confiance pour parler anglais pour de vrai.</p>
 
         <p>Votre message a bien été reçu :</p>
         <div style="background:#f1f5f9;padding:12px 16px;border-radius:6px;margin:16px 0;color:#444;">
@@ -117,12 +116,11 @@ L'équipe AsCode
         </div>
 
         <p style="margin-top:24px;">
-  Répondez directement à cet e-mail pour nous dire si vous souhaitez profiter de l’accompagnement gratuit, ou si vous préférez passer dès maintenant à la formation complète pour avancer plus vite.<br>
-  Nous reviendrons vers vous très vite.<br>
-  À très bientôt sur <b>AsCode</b> pour commencer cette aventure !<br>
-  L’équipe AsCode
-</p>
-
+          Répondez directement à cet e-mail pour démarrer votre programme dès aujourd'hui.<br>
+          Nous reviendrons vers vous rapidement.<br>
+          À bientôt sur <b>ListenMethod</b> !<br>
+          L’équipe ListenMethod
+        </p>
       </div>
     `,
     });
