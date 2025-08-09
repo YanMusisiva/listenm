@@ -221,32 +221,6 @@ const ContactSection = () => {
       className="py-16 bg-gradient-to-b from-[#fef9c3] via-[#f3f4f6] to-[#f8fafc]"
     >
       <div className="max-w-2xl mx-auto bg-white/90 rounded-2xl shadow-2xl p-12 border border-yellow-100 text-center backdrop-blur-sm">
-        {/* <h2 className="text-4xl font-black mb-4 text-black tracking-tight">
-          Prêt à commencer l'aventure&nbsp;?
-        </h2>
-        <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-          <span className="block mb-2">
-            <span className="inline-block bg-yellow-100 text-yellow-900 font-bold px-3 py-1 rounded-full mb-2">
-              Offre exclusive
-            </span>
-          </span>
-          <span className="font-semibold text-black">
-            Rejoignez ListenMethod aujourd&apos;hui et bénéficiez d&apos;un
-            accompagnement pour seulement 49$.
-          </span>
-          <br />
-          <span className="text-gray-600">
-            <b>
-              Arrêtez d'etre mal a l'aise, avec vos collegues ou pendant vos
-              voyages.
-            </b>
-            <br />
-            <span className="text-yellow-600 font-bold">
-              Avec notre formation payante de 99 $, donner aujourd'hui pour 49$
-            </span>
-          </span>
-        </p> */}
-
         <div className="flex flex-col md:flex-row gap-6 justify-center mb-8">
           <div className="flex-1 bg-yellow-50 border border-yellow-200 rounded-xl shadow p-6 text-center">
             <h3 className="text-2xl font-bold text-black mb-2">

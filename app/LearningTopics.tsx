@@ -8,7 +8,7 @@ const topics = [
     items: [
       "Écouter chaque jour les audios fournis (15 à 30 minutes) pour s’habituer aux sons et à la prononciation.",
       "Lire les PDF de vocabulaire et de grammaire de base, puis faire les exercices associés.",
-      "Regarder les vidéos YouTube recommandées pour renforcer la compréhension orale.",
+      "Regarder les vidéos recommandées pour renforcer la compréhension orale.",
     ],
     resources: [
       "Audios d’apprentissage",
@@ -66,7 +66,7 @@ const topics = [
     title: "Orientation selon le domaine",
     color: "text-indigo-600",
     items: [
-      "Regarder les vidéos YouTube recommandées pour apprendre le vocabulaire spécifique.",
+      "Regarder les vidéos recommandées pour apprendre le vocabulaire spécifique.",
       "Lire les PDF spécialisés pour enrichir la terminologie technique.",
       "Regarder des films ou documentaires recommandés pour comprendre le langage en contexte.",
     ],
