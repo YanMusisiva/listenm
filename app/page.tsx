@@ -39,6 +39,14 @@ const Navbar = () => {
               Contact
             </a>
           </li>
+          <li>
+            <a
+              href="#garantie"
+              className="hover:text-black transition-colors text-lg text-gray-700 font-light"
+            >
+              Garantie
+            </a>
+          </li>
         </ul>
         <a
           href="#contact"
@@ -104,6 +112,15 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
               >
                 Contact
+              </a>
+            </li>
+            <li>
+              <a
+                href="#garantie"
+                className="hover:text-black transition-colors text-lg text-gray-700 font-light"
+                onClick={() => setOpen(false)}
+              >
+                Garantie
               </a>
             </li>
             <li>
@@ -402,6 +419,30 @@ const Footer = () => (
   </footer>
 );
 
+const Garantie = () => (
+  <section id="garantie" className="py-20 bg-white border-b border-gray-100">
+    <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
+      <div className="flex-1 bg-white rounded-xl p-10 shadow border border-gray-100">
+        <h2 className="text-3xl font-black mb-4 text-black tracking-tight">
+          Garantie
+        </h2>
+        <p className="text-xl text-gray-700 mb-6 font-light">
+          En 30 jours, vous serez capable d&apos;écouter et de parler avec des
+          anglophones africains ou natifs, sinon vous bénéficiez de 30 jours
+          d&apos;accompagnement gratuit. La méthode repose sur la mémorisation
+          ciblée, la répétition espacée et la pratique concrète, avec un groupe
+          de formateurs issus du Rwanda, du Congo, de l&apos;Ouganda et
+          d&apos;ailleurs. Contrairement aux centres de formation, vous pouvez
+          apprendre partout, même en déplacement ou avant de dormir, sans effort
+          particulier. Tout se fait sur WhatsApp : 30 minutes d&apos;écoute par
+          jour, quelques lectures et des appels pour progresser rapidement.
+        </p>
+        <CTAButton />
+      </div>
+    </div>
+  </section>
+);
+
 const Page = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -420,6 +461,7 @@ const Page = () => {
             <LearningTopics />
           </div>
         </Suspense>
+        <Garantie />
         <ContactSection />
         <Footer />
       </div>
